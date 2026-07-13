@@ -11,7 +11,7 @@ spec:
     path: charts/neo4j
     helm:
       valueFiles:
-        - environments/minikube/values.yaml
+        -  environments/minikube/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: neo4j
