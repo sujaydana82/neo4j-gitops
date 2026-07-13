@@ -2,6 +2,7 @@ name: neo4j
 acceptLicenseAgreement: "yes"
 
 neo4j:
+  name: "neo4j"
   edition: "enterprise"
   resources:
     cpu: "500m"
