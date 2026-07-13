@@ -1,0 +1,19 @@
+neo4j:
+  name: neo4j
+  edition: enterprise
+
+  core:
+    numberOfServers: 3
+    persistentVolume:
+      enabled: true
+      size: 5Gi
+
+  readReplica:
+    numberOfServers: 0
+
+service:
+  type: ClusterIP
+
+config:
+  dbms.mode: CORE
+  dbms.default_listen_address: 0.0.0.0

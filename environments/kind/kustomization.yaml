@@ -1,0 +1,5 @@
+resources:
+  - ../../charts/neo4j
+
+patchesStrategicMerge:
+  - values.yaml
