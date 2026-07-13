@@ -1,0 +1,26 @@
+name: neo4j
+acceptLicenseAgreement: "yes"
+
+neo4j:
+  edition: "enterprise"
+  resources:
+    cpu: "500m"
+    memory: "2Gi"
+
+cluster:
+  enabled: true
+  numberOfCoreServers: 3
+
+volumes:
+  data:
+    mode: dynamic
+    dynamic:
+      storageClassName: standard
+      requests:
+        storage: 5Gi
+
+services:
+  bolt:
+    type: NodePort
+  http:
+    type: NodePort
