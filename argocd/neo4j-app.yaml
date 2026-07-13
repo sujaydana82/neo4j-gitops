@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: file:///f/Projects/Neo4j-Cluster/neo4j-gitops
+    repoURL: https://github.com/sujaydana82/neo4j-gitops4j-gitops
     targetRevision: main
     path: charts/neo4j
     helm:
