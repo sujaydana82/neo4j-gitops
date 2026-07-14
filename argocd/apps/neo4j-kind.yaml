@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: neo4j-kind
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/sujaydana82/neo4j-gitops
+    path: environments/kind
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: neo4j
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
