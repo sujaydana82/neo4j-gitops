@@ -1,6 +1,7 @@
 neo4j:
   name: neo4j-kind
   edition: enterprise
+  acceptLicenseAgreement: "yes"
 
   core:
     numberOfServers: 3
