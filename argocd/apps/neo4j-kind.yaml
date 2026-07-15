@@ -8,11 +8,10 @@ spec:
   source:
     repoURL: https://github.com/sujaydana82/neo4j-gitops
     targetRevision: HEAD
-    path: charts/neo4j
+    path: charts/neo4j-cluster
     helm:
-      parameters:
-        - name: values
-          value: environments/kind/values.yaml
+      valueFiles:
+        - values-kind.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: neo4j
