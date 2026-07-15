@@ -3,10 +3,9 @@ neo4j:
   edition: enterprise
   acceptLicenseAgreement: "yes"
 
-  replicas: 3
-
   core:
     numberOfServers: 3
+    replicas: 3
     persistentVolume:
       enabled: true
       size: 5Gi
