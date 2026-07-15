@@ -18,3 +18,8 @@ service:
 config:
   dbms.mode: CORE
   dbms.default_listen_address: 0.0.0.0
+
+volumes:
+  data:
+    mode: defaultStorageClass
+
