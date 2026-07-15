@@ -3,6 +3,9 @@ neo4j:
   edition: enterprise
   acceptLicenseAgreement: "yes"
 
+  clustering:
+    enabled: true
+
   core:
     numberOfServers: 3
     replicas: 3
