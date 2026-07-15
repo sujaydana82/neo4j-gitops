@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/sujaydana82/neo4j-gitops
     targetRevision: HEAD
-    path: charts/neo4j-cluster
+    path: charts/neo4j
     helm:
       valueFiles:
         - values-kind.yaml
