@@ -1,29 +1,20 @@
 neo4j:
   name: neo4j-kind
   edition: enterprise
-  acceptLicenseAgreement: "yes"
 
-  clustering:
-    enabled: true
-
-  core:
-    numberOfServers: 3
-    replicas: 3
-    persistentVolume:
-      enabled: true
-      size: 5Gi
-
-  readReplica:
-    numberOfServers: 0
-
-service:
-  type: ClusterIP
+cluster:
+  enabled: true
+  members: 3
 
 config:
   dbms.mode: CORE
   dbms.default_listen_address: 0.0.0.0
 
+service:
+  type: ClusterIP
+
 volumes:
   data:
     mode: defaultStorageClass
+    size: 5Gi
 
