@@ -3,6 +3,8 @@ neo4j:
   edition: enterprise
   acceptLicenseAgreement: "yes"
 
+  replicas: 3
+
   core:
     numberOfServers: 3
     persistentVolume:
